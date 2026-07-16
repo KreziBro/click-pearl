@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "clickpearl",
+	"version": "${version}",
+	"name": "Click Pearl",
+	"description": "Throws an ender pearl with a custom keybind without switching hand item.",
+	"authors": [
+		"Antigravity"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/"
+	},
+	"license": "MIT",
+	"icon": "assets/clickpearl/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.clickpearl.ClickPearl"
+		],
+		"client": [
+			"com.clickpearl.client.ClickPearlClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.16.5",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
