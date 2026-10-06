@@ -1,39 +1,40 @@
-# Click Pearl
+# click-pearl
 
-A lightweight **Fabric** client-side mod for Minecraft that lets you throw an Ender Pearl with a single keybind - without manually switching your hotbar slot.
+Fabric клиент-сайд мод для Minecraft, который позволяет кидать эндер-перлы одной кнопкой - без ручного переключения слота.
 
-## Features
+## Возможности
 
-- **Instant pearl throw** — press the keybind and the pearl flies without changing your selected item
-- **No animation glitch** — the hotbar swap happens and reverts in the same tick, so your hand never visually switches
-- **Anti-cheat safe** — sends proper server packets (`ServerboundSetCarriedItemPacket` + `ServerboundUseItemPacket`) in the correct order, mimicking a fast but legitimate hotbar switch
-- **Configurable keybind** — rebindable in Minecraft's standard Controls settings menu (default: **Middle Mouse Button / СКМ**)
-- **Conflict resolution** — automatically suppresses conflicting actions (e.g. vanilla Pick Block) that share the same key
-- **Offhand support** — if pearls are in the offhand, they are thrown directly without any slot swap
-- **Cooldown-aware** — does nothing if Ender Pearls are on cooldown
-- **Multi-version** — works on Minecraft **1.16.5 through 1.21.4**
+- Мгновенный бросок перла по кнопке без смены выбранного предмета в руке
+- Без визуальных глитчей - смена слота и возврат происходят за один тик
+- Безопасно для античитов - отправляет корректные серверные пакеты (`ServerboundSetCarriedItemPacket` + `ServerboundUseItemPacket`) в правильном порядке
+- Настраиваемый кейбинд - переназначается в стандартных настройках управления (по умолчанию: СКМ / Middle Mouse Button)
+- Разрешение конфликтов - автоматически подавляет конфликтующие действия (например, vanilla Pick Block) на той же кнопке
+- Поддержка offhand - перлы в левой руке тоже работают
 
-## Requirements
+## Установка
 
-- [Fabric Loader](https://fabricmc.net/use/installer/) `>= 0.16.0`
-- [Fabric API](https://modrinth.com/mod/fabric-api) (any version matching your MC version)
-- Java `>= 17`
+### 1. Требования
 
-## Installation
+- Minecraft `1.21.4`
+- [Fabric Loader](https://fabricmc.net/use/installer/)
+- [Fabric API](https://modrinth.com/mod/fabric-api)
 
-1. Install [Fabric Loader](https://fabricmc.net/use/installer/) for your Minecraft version.
-2. Download [Fabric API](https://modrinth.com/mod/fabric-api) for your Minecraft version and put it in your `mods` folder.
-3. Put `clickpearl-1.0.0.jar` in your `mods` folder.
-4. Launch the game, go to **Options → Controls → Click Pearl** and configure the keybind.
+### 2. Скачай мод
 
-## Building from source
+Готовую сборку можно взять на [Modrinth](https://modrinth.com/user/KrejziBro).
+
+### 3. Собери из исходников
 
 ```bash
+git clone https://github.com/KreziBro/click-pearl
+cd click-pearl
 ./gradlew build
 ```
 
-The compiled jar will be in `build/libs/`.
+Готовый `.jar` будет в папке `build/libs/`. Скопируй его в папку `mods/` своего Minecraft.
 
-## License
+## Стек
 
-MIT
+- [Fabric](https://fabricmc.net/) - мод-загрузчик
+- [Fabric API](https://modrinth.com/mod/fabric-api) - API для модов
+- Java
